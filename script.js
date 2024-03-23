@@ -7,7 +7,8 @@ function toggleHoverEffect(categoryElement, hasilSection) {
 
   hasilSection.scrollTop = 0;
   hasilSection.scrollIntoView({ behavior: "smooth" });
-}window.addEventListener("scroll", function () {
+}
+window.addEventListener("scroll", function () {
   var navbar = document.querySelector("nav");
   if (window.scrollY > 0) {
     navbar.classList.add("navbar-scrolled");
@@ -49,8 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // bantuan
-const categoryElements = document.querySelectorAll(".category div");
-const hasilSections = document.querySelectorAll(".hasil");
 const konsultasi = document.getElementById("konsultasi");
 const bantuanHukum = document.getElementById("bantuanHukum");
 const konseling = document.getElementById("konseling");
@@ -158,7 +157,7 @@ konsultasi.addEventListener("click", function () {
   k3.style.display = "none";
   k4.style.display = "none";
   k5.style.display = "none";
-})
+});
 
 bantuanHukum.addEventListener("click", function () {
   k2.style.display = "block";
@@ -166,17 +165,32 @@ bantuanHukum.addEventListener("click", function () {
   k3.style.display = "none";
   k4.style.display = "none";
   k5.style.display = "none";
-})
+});
 
 konseling.addEventListener("click", function () {
-  k2.style.display = "block";
+  k3.style.display = "block";
   k1.style.display = "none";
-  k3.style.display = "none";
+  k2.style.display = "none";
   k4.style.display = "none";
   k5.style.display = "none";
-})
-// judul end
+});
 
+rumahAman.addEventListener("click", function () {
+  k4.style.display = "block";
+  k1.style.display = "none";
+  k2.style.display = "none";
+  k3.style.display = "none";
+  k5.style.display = "none";
+});
+
+kesehatan.addEventListener("click", function () {
+  k5.style.display = "block";
+  k1.style.display = "none";
+  k2.style.display = "none";
+  k3.style.display = "none";
+  k4.style.display = "none";
+});
+// judul end
 
 categoryElements.forEach((categoryElement, index) => {
   categoryElement.addEventListener("click", function () {
@@ -206,3 +220,47 @@ categoryElements.forEach((categoryElement, index) => {
     }
   });
 });
+
+// result
+document.addEventListener("DOMContentLoaded", function () {
+  const all = document.getElementById("all");
+  const bandung = document.getElementById("bandung");
+  const jakarta = document.getElementById("jakarta");
+  const yogyakarta = document.getElementById("yogyakarta");
+
+  const allCity = document.getElementById("allCity");
+  const bdg = document.getElementById("bdg");
+  const jkt = document.getElementById("jkt");
+  const diy = document.getElementById("diy");
+
+  allCity.style.display = "block";
+
+  all.addEventListener("click", function () {
+    allCity.style.display = "block";
+    bdg.style.display = "none";
+    jkt.style.display = "none";
+    diy.style.display = "none";
+  });
+
+  bandung.addEventListener("click", function () {
+    bdg.style.display = "block";
+    allCity.style.display = "none";
+    jkt.style.display = "none";
+    diy.style.display = "none";
+  });
+
+  jakarta.addEventListener("click", function () {
+    jkt.style.display = "block";
+    allCity.style.display = "none";
+    bdg.style.display = "none";
+    diy.style.display = "none";
+  });
+
+  yogyakarta.addEventListener("click", function () {
+    diy.style.display = "block";
+    allCity.style.display = "none";
+    bdg.style.display = "none";
+    jkt.style.display = "none";
+  });
+});
+// result end

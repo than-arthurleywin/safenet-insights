@@ -275,6 +275,7 @@ lord-icon {
 .kota div h4 {
   font-weight: normal;
 }
+
 /* kota end */
 
 /* result */
@@ -287,6 +288,7 @@ lord-icon {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  flex-grow: 1;
 }
 
 .result h2 {
@@ -299,15 +301,16 @@ lord-icon {
 }
 
 .consult {
-  flex-grow: 1;
   background-color: rgba(209, 207, 207, 0.817);
   width: 350px;
-  height: 400px;
+  height: 430px;
   margin: 20px;
   border-radius: 20px;
   box-shadow: 0 0 4px 4px rgb(250, 62, 172, 0.5);
   transition: 0.3s;
   cursor: pointer;
+  overflow-y: hidden;
+  display: none;
 }
 
 .consult:hover {
@@ -356,9 +359,38 @@ lord-icon {
   transition: 0.3s;
 }
 
+.gambar2 {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-image: url("https://carilayanan.com/wp-content/uploads/2021/06/possessed-photography-XEhiyexYIpg-unsplash-424x280.jpg");
+}
+
+.gambar3 {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-image: url("https://carilayanan.com/wp-content/uploads/2020/11/national-cancer-institute-NFvdKIhxYlU-unsplash-424x280.jpg");
+}
+
+.gambar4 {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-image: url("https://carilayanan.com/wp-content/uploads/2021/06/tina-floersch-CcbnSarTldQ-unsplash-424x280.jpg");
+}
+
+.gambar5 {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-image: url("https://carilayanan.com/wp-content/uploads/2021/06/tina-floersch-CcbnSarTldQ-unsplash-424x280.jpg");
+}
+
 .btn-lainnya:hover {
   background-color: rgb(250, 62, 172);
 }
+
 /* result end */
 
 /* info website */
