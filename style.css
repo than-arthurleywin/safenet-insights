@@ -12,21 +12,37 @@ body {
   font-family: "Poppins", sans-serif;
   list-style: none;
   text-decoration: none;
-  background-color: #fcf6f5ff;
+  background-image: url("https://images2.imgbox.com/4a/83/BqOjR1HO_o.png");
+  background-size: cover;
+  background-position: inherit;
+  background-attachment: fixed;
+  backdrop-filter: blur(2px);
+}
+
+/* navbar */
+.navbar-scrolled {
+  opacity: 0.8;
+  background-color: rgb(250, 62, 172, 0.5);
+}
+
+.navbar-at-top {
+  position: static;
 }
 
 nav {
-  position: fixed; /* Mengatur navbar menjadi tetap di bagian atas */
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(27, 56, 103);
+  background-color: rgb(250, 62, 172);
   padding: 15px;
-  border-radius: 8px 8px 40px 40px;
+  border-radius: 0 0 5px 5px;
   color: #fcf6f5ff;
   box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 nav .title a {
@@ -46,150 +62,101 @@ nav .navbar a {
   font-size: 15px;
   margin: 10px;
 }
+/* navbar end */
 
-.hero {
+.tombol {
+  display: none;
+}
+
+.btn {
+  margin-top: 5px;
+  cursor: pointer;
+  width: 10%;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  border-bottom: none;
+  transition: 0.3s;
   position: relative;
-  top: -54px;
-  background-image: url("https://images.unsplash.com/photo-1620008850344-1bc6d8ae3e2c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  backdrop-filter: blur(5px);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(250, 62, 172);
+  transition: width 0.4s ease;
+}
+
+.btn:hover::after,
+.btn.active::after {
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: rgba(209, 207, 207, 0.817);
+}
+
+.btn:hover h4 {
+  color: rgb(250, 62, 172);
+}
+.container {
+  background-color: #fcf6f5ff;
+}
+
+.container #satu h4,
+.container #dua h4 {
+  font-weight: normal;
+}
+
+/* bantuan */
+.info {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 110vh;
-  color: rgb(27, 56, 103);
+  background-color: white;
 }
 
-.container {
-  text-align: center;
-  padding: 10px;
-}
-
-.hero h4 {
-  font-weight: normal;
-  margin-bottom: 20px;
-}
-
-.search {
-  display: flex;
-  background-color: #fcf6f5ff;
-  max-width: 670px;
-  border-radius: 40px;
-  min-height: 50px;
-  box-shadow: 0px 0px 3px 3px rgb(0, 0, 0, 0.4);
-  margin: 20px auto;
-}
-
-.box {
-  display: flex;
-  width: 150px;
-  padding: 0px;
-  border-radius: 5px;
-  height: 30px;
-  margin-left: 25px;
-  margin-top: 10px;
-  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.2);
-}
-
-.box input {
-  background-color: #fcf6f5ff;
-  margin-right: 20px;
-  border-radius: 5px;
-  height: 30px;
-  width: 131px;
-  border: none;
-  text-align: center;
-}
-
-.input {
-  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.2);
-}
-
-input:focus {
-  outline: none;
-}
-
-select:focus {
-  outline: none;
-}
-
-i {
-  color: rgb(88, 131, 201);
-  font-size: 14px;
-}
-
-.box i {
-  margin-top: 7px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.box input::after {
-  border: none;
-}
-
-.kategori select,
-.kota select {
-  border-radius: 5px;
-  height: 30px;
-  width: 140px;
-  border: none;
-  background-color: #fcf6f5ff;
-}
-
-.kategori {
-  margin-left: 24px;
-}
-
-.kategori i {
-  margin-top: 8.3px;
-}
-
-.kota i {
-  margin-top: 8.3px;
-}
-
-.kategori,
-.kota {
-  background-color: #fcf6f5ff;
-}
-
-.src {
-  border-radius: 5px;
-  height: 30px;
-  width: 100px;
-  border: none;
-  text-align: center;
-  font-size: 14px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.src:hover {
-  box-shadow: none;
-  margin-top: 12px;
-  margin-left: 27px;
-}
-
-.src p {
-  margin: 3px 3px 0 15px;
-}
-.src i {
-  margin: 7px 3px 0 5px;
+.info lord-icon {
+  position: relative;
+  top: -9px;
 }
 
 .pusat_bantuan {
+  box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.7);
+  background-color: white;
   position: relative;
   height: auto;
-  background-color: #fcf6f5ff;
   text-align: center;
   padding: 10px;
-  margin-top: 0;
+  margin-top: 50px;
 }
 
 .pusat_bantuan h1 {
-  margin: 0px 10px 40px 10px;
-  color: rgb(27, 56, 103);
+  margin: 0px 10px 5px 10px;
+  color: rgb(250, 62, 172);
+}
+
+.tanda::after {
+  content: "";
+  position: absolute;
+  bottom: 1;
+  left: 42.4%;
+  width: 15.4%;
+  height: 2px;
+  background-color: rgb(250, 62, 172);
+}
+
+.info {
+  margin-top: 30px;
+}
+
+.pusat_bantuan #info {
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0, 0.7);
 }
 
 .category {
@@ -205,18 +172,31 @@ i {
   margin: 4px;
 }
 
-.category div {
-  height: 160px;
-  width: 300px;
+.category .ctr {
+  position: relative;
+  overflow-y: hidden;
+  height: 180px;
+  width: 320px;
   background-color: #fcf6f5ff;
-  box-shadow: 0px 0px 3.2px 3.2px rgba(27, 56, 103, 0.7);
+  box-shadow: 0px 0px 3.2px 3.2px rgb(250, 62, 172, 0.7);
   flex-grow: 1;
   border-radius: 10px;
   margin: 8px;
-  color: rgba(27, 56, 103);
+  color: rgb(250, 62, 172);
   text-align: justify;
   padding: 14px;
   cursor: pointer;
+}
+
+.other {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.category .other h3,
+lord-icon {
+  margin: 10px;
 }
 
 .category div p {
@@ -226,205 +206,379 @@ i {
 
 .category div:hover {
   box-shadow: none;
-  background-color: rgba(27, 56, 103);
+  background-color: rgb(250, 62, 172);
   color: #fcf6f5ff;
   transition: 0.3s;
 }
 
-.hasil {
-  height: auto;
-  display: none;
-  overflow-y: auto;
-  background-color: rgb(253, 253, 253);
+.category div.active {
+  box-shadow: 0px 0px 3.2px 3.2px rgb(250, 62, 172, 0.7);
+  background-color: rgb(250, 62, 172);
+  color: #fcf6f5ff;
+  transition: 0.3s;
 }
 
-.hasil h1 {
-  padding: 20px;
+/* bantuan end */
+
+/* kota */
+#kota {
   text-align: center;
-  color: rgb(27, 56, 103);
+  box-shadow: 0 0 5px 5px rgba(220, 214, 214, 0.6);
+  padding: 20px 10px 10px 10px;
+  background-color: rgba(220, 214, 214, 0.6);
+  margin-top: 20px;
 }
 
-.hasil .isi {
+.kota {
+  justify-content: space-evenly;
+  display: flex;
+  margin: 20px 0 0 20px;
+  cursor: pointer;
+}
+
+.kota div {
+  width: 25%;
+  height: 30px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin: 2px 2px 15px 2px;
+}
+.pilih::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(250, 62, 172);
+  transition: width 0.4s ease;
+}
+
+.pilih:hover::after,
+.pilih.active::after {
+  width: 100%;
+}
+
+.pilih:hover {
+  background-color: rgba(209, 207, 207, 0.817);
+}
+
+.pilih:hover h4 {
+  color: rgb(250, 62, 172);
+}
+
+.pilih:hover {
+  background-color: rgba(220, 214, 214, 0.6);
+}
+
+.kota div h4 {
+  font-weight: normal;
+}
+/* kota end */
+
+/* result */
+.hasil {
+  margin-top: 30px;
+}
+
+.result {
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
 }
 
-.deskripsi span {
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 5px;
-  color: rgba(27, 56, 103, 0.785);
+.result h2 {
+  width: 100%;
 }
 
-.deskripsi h4,
-.deskripsi p {
-  margin: 5px;
+.k {
+  text-align: center;
+  display: none;
 }
 
-.hasil .isi .isi1 {
-  overflow: hidden;
-  box-shadow: 0px 0px 3px 3px rgba(27, 56, 103, 0.7);
-  height: 350px;
-  width: 300px;
-  margin: 10px;
+.consult {
+  flex-grow: 1;
+  background-color: rgba(209, 207, 207, 0.817);
+  width: 350px;
+  height: 400px;
+  margin: 20px;
   border-radius: 20px;
-  color: rgb(27, 56, 103);
+  box-shadow: 0 0 4px 4px rgb(250, 62, 172, 0.5);
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.hasil .isi .isi1 .img {
-  position: relative;
-  display: inline-block;
-  border-radius: 10px;
-  margin: 0;
-  width: 300px;
-  height: 200px;
-  background-image: url("https://media.istockphoto.com/id/1001313596/photo/woman-raised-her-hand-for-dissuade-campaign-stop-violence-against-women-asian-woman-raised.webp?b=1&s=170667a&w=0&k=20&c=zzE8R9pvP9J2IIhqGNI5f0Nr-6JVpbk_yEQW7GKvbFw=");
+.consult:hover {
+  box-shadow: none;
+}
+
+.consult .gambar {
+  width: 100%;
+  height: 60%;
+  background-image: url("https://carilayanan.com/wp-content/uploads/2021/06/tingey-injury-law-firm-6sl88x150Xs-unsplash-424x280.jpg");
   background-size: cover;
 }
 
-.hasil .isi .isi1:hover {
-  background-color: rgb(27, 56, 103);
-  color: #fcf6f5ff;
-  transition: 0.3s;
-  box-shadow: none;
-}
-
-.hasil .isi .isi1:hover span {
-  color: rgba(252, 246, 245, 0.705);
-  transition: 0.3s;
-}
-
-.hasil .isi .isi1:hover .img {
-  transform: scale(1.05); /* Ubah skala gambar saat dihover */
-  transition: transform 0.3s ease; /* Tambahkan efek transisi */
-}
-
-.hasil .isi .isi1 .img i {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.hasil:nth-child(3) {
-  /* Menampilkan bagian konseling */
-  display: block;
-}
-
-.hasil:nth-child(3) h1 {
-  /* Gaya judul konseling */
-  color: rgb(27, 56, 103);
-}
-
-.hasil:nth-child(3) .isi .isi1 {
-  overflow: hidden;
-  box-shadow: 0px 0px 3px 3px rgba(27, 56, 103, 0.7);
-  height: 350px;
-  width: 300px;
+.consult .deskripsi {
   margin: 10px;
-  border-radius: 20px;
-  color: rgb(27, 56, 103);
+  text-align: left;
 }
 
-#btn {
-  display: block;
-  margin: 30px auto;
-  border: none;
-  box-shadow: 0 2px 2px 2px rgb(0, 0, 0, 0.4);
-  border-radius: 20px;
-  width: 70%;
-  height: 35px;
-  color: rgba(252, 246, 245, 0.884);
-  background-color: rgb(88, 131, 201);
-  font-size: 16px;
-  cursor: pointer;
+.consult .deskripsi h4 {
+  margin: 10px;
 }
 
-#btn:hover {
-  background-color: rgb(27, 56, 103);
-  color: rgba(252, 246, 245);
-  margin-top: 32px;
-  box-shadow: none;
+.consult .deskripsi h4:nth-child(1) {
+  color: rgba(0, 0, 0, 0.571);
 }
 
-.information {
-  height: auto;
-  border: 1px solid rgb(0, 0, 0, 0.2);
+.consult .deskripsi h4:nth-child(2) i {
+  padding: 2px;
+  color: rgb(250, 62, 172);
 }
 
-.information h1 {
-  color: rgb(27, 56, 103);
-  text-align: center;
+.consult .deskripsi p {
+  margin: 10px;
 }
 
-.information .card {
+.btn-lainnya {
   width: 90%;
-  margin: 30px auto;
+  background-color: rgb(250, 62, 172, 0.9);
+  justify-content: center;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-lainnya:hover {
+  background-color: rgb(250, 62, 172);
+}
+/* result end */
+
+/* info website */
+.nah {
+  padding: 150px 20px 150px 20px;
+}
+
+.nahloh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.582);
+  border-radius: 10px;
+  background-color: white;
+  flex-grow: 1;
+}
+
+.nahloh div {
+  width: 45%;
+  margin: 5px;
+}
+
+.left {
+  background-color: white;
+  height: auto;
+  padding: 70px 10px 0px 10px;
   font-size: 14px;
-  text-align: justify;
 }
 
-.information .card a {
-  font-style: italic;
-  color: black;
+.left p {
+  margin-top: 10px;
 }
 
-.information .card i {
-  color: black;
-  font-style: italic;
+.left h4 {
+  font-size: 14px;
+}
+
+.left p span {
+  color: rgb(250, 62, 172);
   font-weight: bold;
 }
 
-.information .card div {
-  display: flex;
-  height: 440px;
-  width: 350px;
-  margin: 0 auto;
-  background-color: rgb(88, 131, 201);
+.right {
+  background-color: white;
 }
+/* info website end */
 
-.about {
-  text-align: center;
-  background-color: rgb(88, 131, 201);
-  color: rgb(27, 56, 103);
-  font-size: 13px;
-  height: auto;
-  padding: 50px;
+/* informasi */
+.informasi {
+  font-family: "Baloo 2", sans-serif;
+  text-align: justify;
   justify-content: center;
   align-items: center;
 }
 
-.about h1 {
-  color: rgb(27, 56, 103);
+#p i {
+  font-size: 40px;
+  margin-top: px;
+  width: 5%;
+  padding: 5px;
+  color: rgb(250, 62, 172);
 }
 
-.about .abut {
+#p p {
+  font-size: 15px;
+  width: 95%;
+}
+
+#p {
+  box-shadow: 0 0 3px 3px rgb(250, 62, 172, 0.9);
+  padding: 40px;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+/* div1 */
+.div1 {
+  display: flex;
+  background-color: rgb(250, 62, 172);
+  box-shadow: 0 0 7px 7px rgb(250, 62, 172, 0.9);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.img1 {
+  width: 30%;
+}
+
+.isi1 {
   width: 70%;
-  text-align: center;
-  margin: 0 auto;
+  padding: 40px;
 }
 
-footer {
-  padding: 6px;
-  text-align: center;
-  background-color: rgb(27, 56, 103);
-  color: #fcf6f5ff;
+.isi1 span {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* div1 */
+
+/* div2 */
+.div2 {
+  display: flex;
+  width: 95%;
+  padding: 10px;
+  margin: 10px auto;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
 
-footer i,
-footer a {
-  text-decoration: none;
-  color: antiquewhite;
+.div2 .isi2 {
+  max-width: 76%;
+  padding: 50px 40px 40px 40px;
+}
+
+.div2 .img2 {
+  max-width: 24%;
+}
+/* div2 end */
+
+/* div3 */
+.div3 {
+  background-color: rgb(250, 62, 172);
+  box-shadow: 0 0 7px 7px rgb(250, 62, 172, 0.9);
+  padding: 20px 0 20px 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.iisi {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.img3 {
+  width: 26%;
+  padding: 20px;
+}
+
+.isi3 {
+  width: 34%;
+  padding: 40px;
+  text-align: justify;
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.769);
+  margin: 10px;
+  border-radius: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: 0.3s;
+}
+
+.isi3:hover {
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.8);
+}
+
+.div3 p span {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto;
+}
+/* div3 end */
+/* informasi end */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  font-size: 13px;
+  color: rgba(209, 207, 207, 0.817);
+}
+
+.footer h4 {
+  color: white;
+}
+
+.footer .kiri,
+.footer .kiri-kanan,
+.footer .kanan-kiri,
+.footer .kanan {
+  width: 25%;
+  height: auto;
+  background-color: rgba(253, 89, 185, 0.872);
+  padding: 30px;
+}
+
+.footer div h4 {
+  margin-bottom: 10px;
+}
+
+.footer div p {
+  line-height: 1.8;
   cursor: pointer;
-  font-size: 12px;
 }
 
-footer i {
-  margin: 7px;
+.footer div p:hover {
+  color: white;
+}
+
+footer .copy {
+  background-color: rgb(250, 62, 172);
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  padding: 4px;
 }
