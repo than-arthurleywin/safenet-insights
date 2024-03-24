@@ -15,11 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
   </head>
   <body>
     <!-- navbar -->
-    <nav id="navbar">
+    <nav id="navbar" data-aos="fade-down">
       <div class="title"><a href="#hero">SafeNet</a></div>
       <div class="navbar">
         <a href="#hero">Home</a>
@@ -30,16 +32,32 @@
     <!-- navbar -->
 
     <div class="container">
-      <div id="satu" class="btn">
+      <div id="satu" class="btn" data-aos="fade-right">
         <h4>Bantuan</h4>
       </div>
-      <div id="dua" class="btn">
+      <div id="dua" class="btn" data-aos="fade-right">
         <h4>Informasi</h4>
       </div>
       <!-- bantuan -->
+
       <div id="bantuan" class="tombol">
         <!-- pusat bantuan -->
-        <section class="pusat_bantuan">
+        <!-- Hero -->
+        <div class="home" id="home" data-aos="zoom-in">
+          <div class="flex" data-aos="zoom-in">
+            <h2 class="hd" style="font-size: 1.8rem">Butuh Bantuan?</h2>
+            <p class="hd" style="font-size: 1rem">
+              Kami adalah rumah bagi keberanian, tempat di mana setiap wanita
+              yang terluka dapat menemukan perlindungan, dukungan, dan panduan
+              untuk memulai kembali hidup mereka.
+            </p>
+            <a href="#pusat_bantuan">
+              <button class="btnHome">Pusat Bantuan</button>
+            </a>
+          </div>
+        </div>
+        <!--  -->
+        <section id="pusat_bantuan" class="pusat_bantuan">
           <div class="tanda">
             <h1>Pusat Bantuan</h1>
           </div>
@@ -55,7 +73,7 @@
             </h3>
           </div>
           <div class="category">
-            <div id="konsultasi" class="konsultasi ctr">
+            <div id="konsultasi" class="konsultasi ctr" data-aos="fade-up">
               <div class="other">
                 <h3>Konsultasi</h3>
                 <lord-icon
@@ -70,7 +88,7 @@
                 konselor yang berpengalaman.
               </p>
             </div>
-            <div id="bantuanHukum" class="bantuanHukum ctr">
+            <div id="bantuanHukum" class="bantuanHukum ctr" data-aos="fade-up">
               <div class="other">
                 <h3>Bantuan Hukum</h3>
                 <lord-icon
@@ -85,7 +103,7 @@
                 korban yang membutuhkan.
               </p>
             </div>
-            <div id="konseling" class="konseling ctr">
+            <div id="konseling" class="konseling ctr" data-aos="fade-up">
               <div class="other">
                 <h3>Konseling</h3>
                 <lord-icon
@@ -101,7 +119,7 @@
                 kesehatan mental untuk mengeksplorasi psikologis korban.
               </p>
             </div>
-            <div id="rumahAman" class="rumahAman ctr">
+            <div id="rumahAman" class="rumahAman ctr" data-aos="fade-up">
               <div class="other">
                 <h3>Rumah Aman</h3>
                 <lord-icon
@@ -116,7 +134,7 @@
                 mengalami kekerasan dalam rumah tangga atau kekerasan seksual.
               </p>
             </div>
-            <div id="kesehatan" class="kesehatan ctr">
+            <div id="kesehatan" class="kesehatan ctr" data-aos="fade-up">
               <div class="other">
                 <h3>Kesehatan</h3>
                 <lord-icon
@@ -136,383 +154,466 @@
         <!-- pusat bantuan end -->
 
         <!-- kota -->
+
         <section id="kota">
-          <h3>Pilih Kota</h3>
+          <div class="hasil">
+            <div id="k1" class="k"><h2>Konsultasi</h2></div>
+            <div id="k2" class="k"><h2>Bantuan Hukum</h2></div>
+            <div id="k3" class="k"><h2>Konseling</h2></div>
+            <div id="k4" class="k"><h2>Rumah Aman</h2></div>
+            <div id="k5" class="k"><h2>Kesehatan</h2></div>
+          </div>
+          <br />
+          <h3 data-aos="fade-up">Pilih Kota</h3>
           <div class="kota">
-            <div id="all" class="pilih"><h4>Semua Kota</h4></div>
-            <div id="bandung" class="pilih"><h4>Bandung</h4></div>
-            <div id="jakarta" class="pilih"><h4>Jakarta</h4></div>
-            <div id="yogyakarta" class="pilih"><h4>Yogyakarta</h4></div>
+            <div id="all" class="pilih" data-aos="fade-right">
+              <h4>Semua Kota</h4>
+            </div>
+            <div id="bandung" class="pilih" data-aos="fade-right">
+              <h4>Bandung</h4>
+            </div>
+            <div id="jakarta" class="pilih" data-aos="fade-left">
+              <h4>Jakarta</h4>
+            </div>
+            <div id="yogyakarta" class="pilih" data-aos="fade-left">
+              <h4>Yogyakarta</h4>
+            </div>
           </div>
+
+          <!-- hasil -->
+          <section class="hasil">
+            <div class="result">
+              <div id="bdg" class="consult bdg" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>LBH APIK Kota Batu</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl.Kapten Ibnu No.8,
+                    Sisir, Kec.Batu
+                  </h4>
+                  <p>LBH APIK Kota Batu terletak di Kota Batu, Jawa...</p>
+                </div>
+              </div>
+
+              <div id="allCity" class="consult allCity" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>LBH APIK Kota Batu</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl.Kapten Ibnu No.8,
+                    Sisir, Kec.Batu
+                  </h4>
+                  <p>LBH APIK Kota Batu terletak di Kota Batu, Jawa...</p>
+                </div>
+              </div>
+
+              <div id="bdg" class="consult bdg" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Justice Without Borders</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Kode Creative Hub,
+                    Depok Town Square Lt. 2
+                  </h4>
+                  <p>Justice Without Borders menyediakan bantuan hukum ...</p>
+                </div>
+              </div>
+
+              <div id="allCity" class="consult allCity" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Justice Without Borders</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Kode Creative Hub,
+                    Depok Town Square Lt. 2
+                  </h4>
+                  <p>Justice Without Borders menyediakan bantuan hukum ...</p>
+                </div>
+              </div>
+
+              <div id="bdg" class="consult bdg" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>LBH APIK Jawa Barat</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Depok City, West
+                    Java, Indonesia
+                  </h4>
+                  <p>LBH APIK Jawa Barat berlokasi di Depok dan ...</p>
+                </div>
+              </div>
+
+              <div id="allCity" class="consult allCity" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>LBH APIK Jawa Barat</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Depok City, West
+                    Java, Indonesia
+                  </h4>
+                  <p>LBH APIK Jawa Barat berlokasi di Depok dan ...</p>
+                </div>
+              </div>
+
+              <div id="bdg" class="consult bdg" data-aos="zoom-in-down">
+                <div class="gambar2"></div>
+                <div class="deskripsi">
+                  <h4>Rumah Ruth</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Dangdeur Indah
+                    II No.12a, Sukagalih
+                  </h4>
+                  <p>Rumah Ruth berlokasi di Bandung dan menyedia ...</p>
+                </div>
+              </div>
+
+              <div id="bdg" class="consult bdg" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>ECPAT Indonesia</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Angsana 1,
+                    Pejaten Tim., Kec. Ps. Minggu
+                  </h4>
+                  <p>ECPAT Indonesia merupakan bagian dari ECPAT ...</p>
+                </div>
+              </div>
+
+              <div id="bdg" class="consult bdg" data-aos="zoom-in-down">
+                <div class="gambar3"></div>
+                <div class="deskripsi">
+                  <h4>Klinik Mawar PKBI Bandung</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Pasir Kaliki
+                    No.26, Kb. Jeruk, Kec. Andir
+                  </h4>
+                  <p>PKBI didirikan pada tanggal 23 Desember 1957 di ...</p>
+                </div>
+              </div>
+
+              <div id="bdg" class="consult bdg" data-aos="zoom-in-down">
+                <div class="gambar3"></div>
+                <div class="deskripsi">
+                  <h4>Klinik Teratai PKBI Jawa Barat</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Soekarno-Hatta
+                    No.496, Batununggal
+                  </h4>
+                  <p>PKBI didirikan pada tanggal 23 Desember 1957 di ...</p>
+                </div>
+              </div>
+
+              <div id="bdg" class="consult bdg" data-aos="zoom-in-down">
+                <div class="gambar4"></div>
+                <div class="deskripsi">
+                  <h4>P2TP2A Jawa Barat</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. L. L. R.E.
+                    Martadinata No.2
+                  </h4>
+                  <p>P2TP2A Jawa Barat menyelenggarakan layanan seperti ...</p>
+                </div>
+              </div>
+
+              <div id="bdg" class="consult bdg" data-aos="zoom-in-down">
+                <div class="gambar5"></div>
+                <div class="deskripsi">
+                  <h4>Samahita</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Babakan Jeruk I
+                    No.9, Sukagalih
+                  </h4>
+                  <p>Samahita adalah komunitas yang menyuarakan isu ...</p>
+                </div>
+              </div>
+
+              <div id="jkt" class="consult jkt" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Justice Without Borders</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Kode Creative Hub,
+                    Depok Town Square Lt. 2
+                  </h4>
+                  <p>Justice Without Borders menyediakan bantuan hukum ...</p>
+                </div>
+              </div>
+
+              <div id="allCity" class="consult allCity" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Justice Without Borders</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Kode Creative Hub,
+                    Depok Town Square Lt. 2
+                  </h4>
+                  <p>Justice Without Borders menyediakan bantuan hukum ...</p>
+                </div>
+              </div>
+
+              <div id="jkt" class="consult jkt" data-aos="zoom-in-down">
+                <div class="gambar3"></div>
+                <div class="deskripsi">
+                  <h4>Puskesmas Kec.Cipayung</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Bambu Hitam
+                    No.104, RT.4/RW.1, Bambu Apus
+                  </h4>
+                  <p>Puskesmas Kec. Cipayung berlokasi di Cipayung, ...</p>
+                </div>
+              </div>
+
+              <div id="allCity" class="consult allCity" data-aos="zoom-in-down">
+                <div class="gambar3"></div>
+                <div class="deskripsi">
+                  <h4>Puskesmas Kec.Cipayung</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Bambu Hitam
+                    No.104, RT.4/RW.1, Bambu Apus
+                  </h4>
+                  <p>Puskesmas Kec. Cipayung berlokasi di Cipayung, ...</p>
+                </div>
+              </div>
+
+              <div id="jkt" class="consult jkt" data-aos="zoom-in-down">
+                <div class="gambar3"></div>
+                <div class="deskripsi">
+                  <h4>Samsara</h4>
+                  <h4><i class="fa-solid fa-location-dot"></i>Indonesia</h4>
+                  <p>Samsara memiliki fokus kerja pada peningkatan ...</p>
+                </div>
+              </div>
+
+              <div id="allCity" class="consult allCity" data-aos="zoom-in-down">
+                <div class="gambar3"></div>
+                <div class="deskripsi">
+                  <h4>Samsara</h4>
+                  <h4><i class="fa-solid fa-location-dot"></i>Indonesia</h4>
+                  <p>Samsara memiliki fokus kerja pada peningkatan ...</p>
+                </div>
+              </div>
+
+              <div id="jkt" class="consult jkt" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>ECPAT Indonesia</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Angsana 1,
+                    Pejaten Tim., Kec. Ps. Minggu
+                  </h4>
+                  <p>ECPAT Indonesia merupakan bagian dari ECPAT ...</p>
+                </div>
+              </div>
+
+              <div id="jkt" class="consult jkt" data-aos="zoom-in-down">
+                <div class="gambar3"></div>
+                <div class="deskripsi">
+                  <h4>PKBI DKI Jakarta</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Pisangan Baru
+                    Selatan No.7, RT.1/RW.15
+                  </h4>
+                  <p>PKBI didirikan pada tanggal 23 Desember 1957 di ...</p>
+                </div>
+              </div>
+
+              <div id="jkt" class="consult jkt" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Kolektif Advokat untuk Keadilan Gender (KAKG)</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>18 Office Park 10th
+                    Floor Unit A
+                  </h4>
+                  <p>Kolektif Advokat untuk Keadilan Gender (KAKG) ...</p>
+                </div>
+              </div>
+
+              <div id="jkt" class="consult jkt" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>P2TP2A DKI Jakarta</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Gedung LPMJ, Jln.
+                    Raya Bekasi Km. 18
+                  </h4>
+                  <p>Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan ...</p>
+                </div>
+              </div>
+
+              <div id="jkt" class="consult jkt" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Lembaga Perlindungan Saksi dan Korban (LPSK)</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Raya Bogor
+                    No.KM. 24 No. 47-49, RT.6/RW.1
+                  </h4>
+                  <p>Lembaga Perlindungan Saksi dan Korban (LPSK) ...</p>
+                </div>
+              </div>
+
+              <div id="jkt" class="consult jkt" data-aos="zoom-in-down">
+                <div class="gambar4"></div>
+                <div class="deskripsi">
+                  <h4>Balai Anak Handayani</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. P.P.A, Bambu
+                    Apus, Kec. Cipayung
+                  </h4>
+                  <p>Balai Rehabilitasi Sosial Anak Memerlukan ...</p>
+                </div>
+              </div>
+
+              <div id="diy" class="consult diy" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>SAFEnet</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Gitasura III,
+                    Peguyangan Kaja
+                  </h4>
+                  <p>Southeast Asia Freedom of Expression ...</p>
+                </div>
+              </div>
+
+              <div id="allCity" class="consult allCity" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>SAFEnet</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Gitasura III,
+                    Peguyangan Kaja
+                  </h4>
+                  <p>Southeast Asia Freedom of Expression ...</p>
+                </div>
+              </div>
+
+              <div id="diy" class="consult diy" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Yayasan Rifka Annisa</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Kompleks Jatimulyo
+                    Indah Jl. Jambon IV No.69A
+                  </h4>
+                  <p>Yayasan Rifka Annisa berdiri pada 1993 di ...</p>
+                </div>
+              </div>
+
+              <div id="allCity" class="consult allCity" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Yayasan Rifka Annisa</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Kompleks Jatimulyo
+                    Indah Jl. Jambon IV No.69A
+                  </h4>
+                  <p>Yayasan Rifka Annisa berdiri pada 1993 di ...</p>
+                </div>
+              </div>
+
+              <div id="diy" class="consult diy" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Yayasan Gembala Baik (Srikandi Social Services)</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Gampingan WB
+                    1/756, Pakuncen, Wirobrajan
+                  </h4>
+                  <p>Layanan terpadu untuk perempuan dan anak yang ...</p>
+                </div>
+              </div>
+
+              <div id="diy" class="consult diy" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>LBH Yogyakarta</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Benowo,
+                    Prenggan, Kec. Kotagede
+                  </h4>
+                  <p>Lembaga Bantuan Hukum (LBH) Yogyakarta adalah ...</p>
+                </div>
+              </div>
+
+              <div id="diy" class="consult diy" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>P2TP2A REKSO DYAH UTAMI</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Balirejo No.29,
+                    Muja Muju
+                  </h4>
+                  <p>P2TP2A REKSO DYAH UTAMI menyelenggarakan layanan ...</p>
+                </div>
+              </div>
+
+              <div id="diy" class="consult diy" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>PKBI DIY</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jalan Tamansiswa Gg
+                    Basuki MG II/558
+                  </h4>
+                  <p>PKBI didirikan pada tanggal 23 Desember 1957 di ...</p>
+                </div>
+              </div>
+
+              <div id="diy" class="consult diy" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>ECPAT Indonesia</h4>
+                  <h4>
+                    <i class="fa-solid fa-location-dot"></i>Jl. Angsana 1,
+                    Pejaten Tim., Kec. Ps. Minggu
+                  </h4>
+                  <p>ECPAT Indonesia merupakan bagian dari ECPAT ...</p>
+                </div>
+              </div>
+
+              <div id="diy" class="consult diy" data-aos="zoom-in-down">
+                <div class="gambar"></div>
+                <div class="deskripsi">
+                  <h4>Samsara</h4>
+                  <h4><i class="fa-solid fa-location-dot"></i>Indonesia</h4>
+                  <p>Samsara memiliki fokus kerja pada peningkatan ...</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="btn-lainnya" data-aos="zoom-out"><p>Lainnya</p></div>
+          <!-- hasil end -->
         </section>
+
         <!-- kota end -->
-
-        <!-- hasil -->
-        <section class="hasil">
-          <div id="k1" class="k"><h2>Konsultasi</h2></div>
-          <div id="k2" class="k"><h2>Bantuan Hukum</h2></div>
-          <div id="k3" class="k"><h2>Konseling</h2></div>
-          <div id="k4" class="k"><h2>Rumah Aman</h2></div>
-          <div id="k5" class="k"><h2>Kesehatan</h2></div>
-
-          <div class="result">
-            <div id="bdg allCity" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>LBH APIK Kota Batu</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl.Kapten Ibnu No.8,
-                  Sisir, Kec.Batu
-                </h4>
-                <p>LBH APIK Kota Batu terletak di Kota Batu, Jawa...</p>
-              </div>
-            </div>
-
-            <div id="bdg allCity" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>Justice Without Borders</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Kode Creative Hub,
-                  Depok Town Square Lt. 2
-                </h4>
-                <p>Justice Without Borders menyediakan bantuan hukum ...</p>
-              </div>
-            </div>
-
-            <div id="bdg allCity" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>LBH APIK Jawa Barat</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Depok City, West Java,
-                  Indonesia
-                </h4>
-                <p>LBH APIK Jawa Barat berlokasi di Depok dan ...</p>
-              </div>
-            </div>
-
-            <div id="bdg" class="consult">
-              <div class="gambar2"></div>
-              <div class="deskripsi">
-                <h4>Rumah Ruth</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Dangdeur Indah II
-                  No.12a, Sukagalih
-                </h4>
-                <p>Rumah Ruth berlokasi di Bandung dan menyedia ...</p>
-              </div>
-            </div>
-
-            <div id="bdg" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>ECPAT Indonesia</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Angsana 1, Pejaten
-                  Tim., Kec. Ps. Minggu
-                </h4>
-                <p>ECPAT Indonesia merupakan bagian dari ECPAT ...</p>
-              </div>
-            </div>
-
-            <div id="bdg" class="consult">
-              <div class="gambar3"></div>
-              <div class="deskripsi">
-                <h4>Klinik Mawar PKBI Bandung</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Pasir Kaliki
-                  No.26, Kb. Jeruk, Kec. Andir
-                </h4>
-                <p>PKBI didirikan pada tanggal 23 Desember 1957 di ...</p>
-              </div>
-            </div>
-
-            <div id="bdg" class="consult">
-              <div class="gambar3"></div>
-              <div class="deskripsi">
-                <h4>Klinik Teratai PKBI Jawa Barat</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Soekarno-Hatta
-                  No.496, Batununggal
-                </h4>
-                <p>PKBI didirikan pada tanggal 23 Desember 1957 di ...</p>
-              </div>
-            </div>
-
-            <div id="bdg" class="consult">
-              <div class="gambar4"></div>
-              <div class="deskripsi">
-                <h4>P2TP2A Jawa Barat</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. L. L. R.E.
-                  Martadinata No.2
-                </h4>
-                <p>P2TP2A Jawa Barat menyelenggarakan layanan seperti ...</p>
-              </div>
-            </div>
-
-            <div id="bdg" class="consult">
-              <div class="gambar5"></div>
-              <div class="deskripsi">
-                <h4>Samahita</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Babakan Jeruk I
-                  No.9, Sukagalih
-                </h4>
-                <p>Samahita adalah komunitas yang menyuarakan isu ...</p>
-              </div>
-            </div>
-
-            <div id="jkt allCity" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>Justice Without Borders</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Kode Creative Hub,
-                  Depok Town Square Lt. 2
-                </h4>
-                <p>Justice Without Borders menyediakan bantuan hukum ...</p>
-              </div>
-            </div>
-
-            <div id="jkt allCity" class="consult">
-              <div class="gambar3"></div>
-              <div class="deskripsi">
-                <h4>Puskesmas Kec.Cipayung</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Bambu Hitam
-                  No.104, RT.4/RW.1, Bambu Apus
-                </h4>
-                <p>Puskesmas Kec. Cipayung berlokasi di Cipayung, ...</p>
-              </div>
-            </div>
-
-            <div id="jkt allCity" class="consult">
-              <div class="gambar3"></div>
-              <div class="deskripsi">
-                <h4>Samsara</h4>
-                <h4><i class="fa-solid fa-location-dot"></i>Indonesia</h4>
-                <p>Samsara memiliki fokus kerja pada peningkatan ...</p>
-              </div>
-            </div>
-
-            <div id="jkt" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>ECPAT Indonesia</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Angsana 1, Pejaten
-                  Tim., Kec. Ps. Minggu
-                </h4>
-                <p>ECPAT Indonesia merupakan bagian dari ECPAT ...</p>
-              </div>
-            </div>
-
-            <div id="jkt" class="consult">
-              <div class="gambar3"></div>
-              <div class="deskripsi">
-                <h4>PKBI DKI Jakarta</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Pisangan Baru
-                  Selatan No.7, RT.1/RW.15
-                </h4>
-                <p>PKBI didirikan pada tanggal 23 Desember 1957 di ...</p>
-              </div>
-            </div>
-
-            <div id="jkt" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>Kolektif Advokat untuk Keadilan Gender (KAKG)</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>18 Office Park 10th
-                  Floor Unit A
-                </h4>
-                <p>Kolektif Advokat untuk Keadilan Gender (KAKG) ...</p>
-              </div>
-            </div>
-
-            <div id="jkt" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>P2TP2A DKI Jakarta</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Gedung LPMJ, Jln. Raya
-                  Bekasi Km. 18
-                </h4>
-                <p>Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan ...</p>
-              </div>
-            </div>
-
-            <div id="jkt" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>Lembaga Perlindungan Saksi dan Korban (LPSK)</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Raya Bogor No.KM.
-                  24 No. 47-49, RT.6/RW.1
-                </h4>
-                <p>Lembaga Perlindungan Saksi dan Korban (LPSK) ...</p>
-              </div>
-            </div>
-
-            <div id="jkt" class="consult">
-              <div class="gambar4"></div>
-              <div class="deskripsi">
-                <h4>Balai Anak Handayani</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. P.P.A, Bambu Apus,
-                  Kec. Cipayung
-                </h4>
-                <p>Balai Rehabilitasi Sosial Anak Memerlukan ...</p>
-              </div>
-            </div>
-
-            <div id="diy allCity" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>SAFEnet</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Gitasura III,
-                  Peguyangan Kaja
-                </h4>
-                <p>Southeast Asia Freedom of Expression ...</p>
-              </div>
-            </div>
-
-            <div id="diy allCity" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>SAFEnet</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Gitasura III,
-                  Peguyangan Kaja
-                </h4>
-                <p>Southeast Asia Freedom of Expression ...</p>
-              </div>
-            </div>
-
-            <div id="diy allCity" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>Yayasan Rifka Annisa</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Kompleks Jatimulyo
-                  Indah Jl. Jambon IV No.69A
-                </h4>
-                <p>Yayasan Rifka Annisa berdiri pada 1993 di ...</p>
-              </div>
-            </div>
-
-            <div id="diy" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>Yayasan Gembala Baik (Srikandi Social Services)</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Gampingan WB
-                  1/756, Pakuncen, Wirobrajan
-                </h4>
-                <p>Layanan terpadu untuk perempuan dan anak yang ...</p>
-              </div>
-            </div>
-
-            <div id="diy" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>LBH Yogyakarta</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Benowo, Prenggan,
-                  Kec. Kotagede
-                </h4>
-                <p>Lembaga Bantuan Hukum (LBH) Yogyakarta adalah ...</p>
-              </div>
-            </div>
-
-            <div id="diy" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>P2TP2A REKSO DYAH UTAMI</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Balirejo No.29,
-                  Muja Muju
-                </h4>
-                <p>P2TP2A REKSO DYAH UTAMI menyelenggarakan layanan ...</p>
-              </div>
-            </div>
-
-            <div id="diy" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>PKBI DIY</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jalan Tamansiswa Gg
-                  Basuki MG II/558
-                </h4>
-                <p>PKBI didirikan pada tanggal 23 Desember 1957 di ...</p>
-              </div>
-            </div>
-
-            <div id="diy" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>ECPAT Indonesia</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Angsana 1, Pejaten
-                  Tim., Kec. Ps. Minggu
-                </h4>
-                <p>ECPAT Indonesia merupakan bagian dari ECPAT ...</p>
-              </div>
-            </div>
-
-            <div id="diy" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>Samsara</h4>
-                <h4><i class="fa-solid fa-location-dot"></i>Indonesia</h4>
-                <p>Samsara memiliki fokus kerja pada peningkatan ...</p>
-              </div>
-            </div>
-
-            <div id="diy" class="consult">
-              <div class="gambar"></div>
-              <div class="deskripsi">
-                <h4>Lembaga Perlindungan Saksi dan Korban (LPSK)</h4>
-                <h4>
-                  <i class="fa-solid fa-location-dot"></i>Jl. Raya Bogor No.KM.
-                  24 No. 47-49, RT.6/RW.1
-                </h4>
-                <p>Lembaga Perlindungan Saksi dan Korban (LPSK) ...</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="btn-lainnya"><p>Lainnya</p></div>
-        </section>
-        <!-- hasil end -->
 
         <!-- website -->
         <section class="nah">
           <div class="nahloh">
             <div class="left">
-              <p><span>Apa itu Safe Net?</span></p>
+              <p data-aos="fade-down-right"><span>Apa itu Safe Net?</span></p>
               <br />
 
-              <h2>BANTUAN BAGI KORBAN KEKERASAN SEKSUAL</h2>
+              <h2 data-aos="fade-down-right">
+                BANTUAN BAGI KORBAN KEKERASAN SEKSUAL
+              </h2>
               <br />
 
-              <h4>
+              <h4 data-aos="fade-down-right">
                 Safe Net hadir sebagai platform yang menghubungkan korban
                 kekerasan berbasis gender di seluruh Indonesia dengan lembaga
                 bantuan.
               </h4>
               <br />
-              <p>
+              <p data-aos="fade-down-right">
                 Anda dapat menemukan lembaga non-pemerintah dan pemerintah yang
                 siap memberikan layanan gratis.
               </p>
               <br />
-              <p>
+              <p data-aos="fade-down-right">
                 Teman dan keluarga korban juga dapat menggunakan Safe Net untuk
                 mencari bantuan yang diperlukan.
               </p>
@@ -537,7 +638,7 @@
       <div id="informasi" class="tombol">
         <div class="informasi">
           <div class="div1">
-            <div class="img1">
+            <div class="img1" >
               <dotlottie-player
                 src="https://lottie.host/1db3a25d-1afc-4ac0-932c-98292fa04cf9/yvEeVks8E9.json"
                 background="transparent"
@@ -548,8 +649,10 @@
               ></dotlottie-player>
             </div>
             <div class="isi1">
-              <p><span>APA ITU KEKERASAN SEKSUAL??!</span></p>
-              <p>
+              <p >
+                <span>APA ITU KEKERASAN SEKSUAL??!</span>
+              </p>
+              <p >
                 Kekerasan seksual adalah tindakan yang melibatkan pemaksaan atau
                 penyalahgunaan seksual terhadap seseorang tanpa persetujuan
                 mereka. Ini mencakup berbagai bentuk, seperti pelecehan seksual,
@@ -566,9 +669,9 @@
             </div>
           </div>
 
-          <div id="p">
+          <div id="p" >
             <i class="fa-solid fa-circle-info"></i>
-            <p>
+            <p data-aos="zoom-in">
               Kekerasan seksual di era digital meningkat secara signifikan,
               terutama di Indonesia, dan sering menargetkan anak muda. Data
               terakhir menunjukkan bahwa kekerasan gender berbasis online di
@@ -622,11 +725,11 @@
                   sesuai dengan UU Tindak Pidana Kekerasan Seksual (UU TPKS)
                   yang telah disahkan. UU ini mencakup berbagai bentuk kekerasan
                   seksual, termasuk pelecehan seksual, dan menetapkan hukuman
-                  yang diatur untuk pelaku kekerasan seksual. Misalnya, pejabat
-                  yang melakukan kekerasan seksual dapat mendapatkan hukuman
-                  penjara sebesar 12 tahun, dan mengambil dan membagikan gambar
-                  bermuatan seksual tanpa persetujuan dapat dihukum dengan
-                  penjara selama 4 tahun.
+                  yang diatur untuk pelaku kekerasan seksual.
+                  <br />Misalnya, pejabat yang melakukan kekerasan seksual dapat
+                  mendapatkan hukuman penjara sebesar 12 tahun, dan mengambil
+                  dan membagikan gambar bermuatan seksual tanpa persetujuan
+                  dapat dihukum dengan penjara selama 4 tahun.
                 </p>
               </div>
               <div class="img3">
@@ -646,6 +749,7 @@
                   meningkatkan pemahaman tentang apa itu kekerasan seksual,
                   bagaimana mengidentifikasi dan melaporkan kasusnya, serta
                   pentingnya menghargai konsentuasi dan batasan orang lain.
+                  <br />
                   Dengan demikian, UU TPKS berusaha menciptakan lingkungan yang
                   lebih aman dan mendukung bagi korban kekerasan seksual, serta
                   mengurangi kemungkinan terjadinya kekerasan seksual di masa
@@ -700,5 +804,8 @@
       src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
       type="module"
     ></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

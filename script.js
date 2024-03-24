@@ -1,23 +1,14 @@
-const categoryElements = document.querySelectorAll(".category div");
+const categoryElements = document.querySelectorAll(".category .ctr");
+const city = document.getElementById("kota");
 const hasilSections = document.querySelectorAll(".hasil");
 
 function toggleHoverEffect(categoryElement, hasilSection) {
   categoryElement.classList.toggle("category-hover");
-  hasilSection.style.display = "block";
+  city.style.display = "block";
 
-  hasilSection.scrollTop = 0;
-  hasilSection.scrollIntoView({ behavior: "smooth" });
+  city.scrollTop = 0;
+  city.scrollIntoView({ behavior: "smooth" });
 }
-window.addEventListener("scroll", function () {
-  var navbar = document.querySelector("nav");
-  if (window.scrollY > 0) {
-    navbar.classList.add("navbar-scrolled");
-    navbar.classList.remove("navbar-at-top");
-  } else {
-    navbar.classList.remove("navbar-scrolled");
-    navbar.classList.add("navbar-at-top");
-  }
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const satu = document.getElementById("satu");
@@ -97,8 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
     jakarta.classList.remove("active");
     yogyakarta.style.color = "black";
     yogyakarta.classList.remove("active");
-    // bantuan.style.display = "block";
-    // informasi.style.display = "none";
   });
 
   bandung.addEventListener("click", function () {
@@ -110,8 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
     jakarta.classList.remove("active");
     yogyakarta.style.color = "black";
     yogyakarta.classList.remove("active");
-    // bantuan.style.display = "block";
-    // informasi.style.display = "none";
   });
 
   jakarta.addEventListener("click", function () {
@@ -123,8 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
     all.classList.remove("active");
     yogyakarta.style.color = "black";
     yogyakarta.classList.remove("active");
-    // bantuan.style.display = "block";
-    // informasi.style.display = "none";
   });
 
   yogyakarta.addEventListener("click", function () {
@@ -136,8 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
     jakarta.classList.remove("active");
     all.style.color = "black";
     all.classList.remove("active");
-    // bantuan.style.display = "block";
-    // informasi.style.display = "none";
   });
 });
 // kota end
@@ -222,45 +205,34 @@ categoryElements.forEach((categoryElement, index) => {
 });
 
 // result
-document.addEventListener("DOMContentLoaded", function () {
-  const all = document.getElementById("all");
-  const bandung = document.getElementById("bandung");
-  const jakarta = document.getElementById("jakarta");
-  const yogyakarta = document.getElementById("yogyakarta");
+const allCity = document.querySelectorAll(".allCity");
+const bdg = document.querySelectorAll(".bdg");
+const jkt = document.querySelectorAll(".jkt");
+const diy = document.querySelectorAll(".diy");
 
-  const allCity = document.getElementById("allCity");
-  const bdg = document.getElementById("bdg");
-  const jkt = document.getElementById("jkt");
-  const diy = document.getElementById("diy");
-
-  allCity.style.display = "block";
-
-  all.addEventListener("click", function () {
-    allCity.style.display = "block";
-    bdg.style.display = "none";
-    jkt.style.display = "none";
-    diy.style.display = "none";
-  });
-
-  bandung.addEventListener("click", function () {
-    bdg.style.display = "block";
-    allCity.style.display = "none";
-    jkt.style.display = "none";
-    diy.style.display = "none";
-  });
-
-  jakarta.addEventListener("click", function () {
-    jkt.style.display = "block";
-    allCity.style.display = "none";
-    bdg.style.display = "none";
-    diy.style.display = "none";
-  });
-
-  yogyakarta.addEventListener("click", function () {
-    diy.style.display = "block";
-    allCity.style.display = "none";
-    bdg.style.display = "none";
-    jkt.style.display = "none";
-  });
+document.getElementById("all").addEventListener("click", function () {
+  showElements(allCity);
 });
-// result end
+document.getElementById("bandung").addEventListener("click", function () {
+  showElements(bdg);
+});
+document.getElementById("jakarta").addEventListener("click", function () {
+  showElements(jkt);
+});
+document.getElementById("yogyakarta").addEventListener("click", function () {
+  showElements(diy);
+});
+
+function showElements(elements) {
+  elements.forEach((element) => {
+    element.style.display = "block";
+  });
+
+  [allCity, bdg, jkt, diy].forEach((group) => {
+    if (group !== elements) {
+      group.forEach((element) => {
+        element.style.display = "none";
+      });
+    }
+  });
+}
