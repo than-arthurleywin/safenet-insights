@@ -1,6 +1,16 @@
 const categoryElements = document.querySelectorAll(".category .ctr");
 const city = document.getElementById("kota");
 const hasilSections = document.querySelectorAll(".hasil");
+const mobilenavbutton = document.getElementById("mobile-nav");
+const mobilenavbox = document.getElementById("mobile-navbar");
+
+mobilenavbutton.addEventListener("click", () => {
+  if (mobilenavbox.style.display === "none") {
+    mobilenavbox.style.display = "flex";
+  } else {
+    mobilenavbox.style.display = "none";
+  }
+});
 
 function toggleHoverEffect(categoryElement, hasilSection) {
   categoryElement.classList.toggle("category-hover");
@@ -237,5 +247,73 @@ function showElements(elements) {
   });
 }
 
+// popup
+const btnmodal = document.querySelectorAll("#btn-modal");
+btnmodal.forEach((el) => {
+  el.addEventListener("click", handleModal);
+});
 
-// popup 
+function handleModal(event) {
+  console.log(event.target);
+  const id = event.target.getAttribute("data-id");
+  const modal = document.getElementById(`modal-${id}`);
+  const closebtn = document.getElementById(`close-${id}`);
+  modal.style.display = "flex";
+  closebtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+}
+
+function handleGetFormData() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const city = document.getElementById("city").value;
+  const zipCode = document.getElementById("zip-code").value;
+  const status = document.getElementById("status").checked;
+
+  return {
+    name: name,
+    email: email,
+    city: city,
+    zipCode: zipCode,
+    status: status,
+  };
+}
+
+function isNumber(str) {
+  return !isNaN(str) && !isNaN(parseFloat(str));
+}
+
+function checkboxIsChecked() {
+  return document.getElementById("status").checked;
+}
+
+function validateFormData(data) {
+  return (
+    data !== null &&
+    typeof data.name === "string" &&
+    data.name.trim() !== "" &&
+    typeof data.city === "string" &&
+    data.city.trim() !== "" &&
+    typeof data.email === "string" &&
+    data.email.trim() !== "" &&
+    !isNaN(data.zipCode) &&
+    document.getElementById("status").checked
+  );
+}
+
+function submit() {
+  const formData = handleGetFormData();
+  const isValid = validateFormData(formData);
+
+  const warning = document.getElementById("warning");
+
+  if (!isValid) {
+    warning.textContent = "Periksa form anda sekali lagi";
+  } else {
+    warning.textContent = "";
+  }
+}
+
+const myForm = document.getElementById("myForm");
+myForm.addEventListener("submit", submit);
