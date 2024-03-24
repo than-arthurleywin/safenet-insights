@@ -28,7 +28,7 @@ nav {
   z-index: 1000;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(250, 62, 172);
+  background-color: #ff85a2;
   padding: 15px;
   border-radius: 0 0 5px 5px;
   color: #fcf6f5ff;
@@ -87,7 +87,7 @@ nav .navbar a {
   width: 12em;
   padding: 8px;
   border-radius: 12px;
-  background-color: rgb(250, 62, 172);
+  background-color: #ff85a2;
   border: none;
   transition: 0.4s;
   color: white;
@@ -122,7 +122,7 @@ nav .navbar a {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: rgb(250, 62, 172);
+  background-color: #ff85a2;
   transition: width 0.4s ease;
 }
 
@@ -136,7 +136,7 @@ nav .navbar a {
 }
 
 .btn:hover h4 {
-  color: rgb(250, 62, 172);
+  color: #ff85a2;
 }
 .container {
   background-color: #fcf6f5ff;
@@ -170,7 +170,7 @@ nav .navbar a {
 
 .pusat_bantuan h1 {
   margin: 0px 10px 5px 10px;
-  color: rgb(250, 62, 172);
+  color: #ff85a2;
 }
 
 .tanda::after {
@@ -180,7 +180,7 @@ nav .navbar a {
   left: 42.4%;
   width: 15.4%;
   height: 2px;
-  background-color: rgb(250, 62, 172);
+  background-color: #ff85a2;
 }
 
 .info {
@@ -215,9 +215,9 @@ nav .navbar a {
   height: 180px;
   width: 320px;
   background-color: #fcf6f5ff;
-  box-shadow: 0px 0px 3.2px 3.2px rgb(250, 62, 172, 0.7);
+  box-shadow: 0px 0px 3.2px 3.2px rgb(255, 133, 162, 0.7);
   border-radius: 10px;
-  color: rgb(250, 62, 172);
+  color: #ff85a2;
   padding: 20px;
   cursor: pointer;
   margin: 8px;
@@ -242,14 +242,14 @@ lord-icon {
 
 .category div:hover {
   box-shadow: none;
-  background-color: rgb(250, 62, 172);
+  background-color: #ff85a2;
   color: #fcf6f5ff;
   transition: 0.3s;
 }
 
 .category div.active {
-  box-shadow: 0px 0px 3.2px 3.2px rgb(250, 62, 172, 0.7);
-  background-color: rgb(250, 62, 172);
+  box-shadow: 0px 0px 3.2px 3.2px rgb(255, 133, 162, 0.7);
+  background-color: #ff85a2;
   color: #fcf6f5ff;
   transition: 0.3s;
 }
@@ -291,7 +291,7 @@ lord-icon {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: rgb(250, 62, 172);
+  background-color: #ff85a2;
   transition: width 0.4s ease;
 }
 
@@ -305,7 +305,7 @@ lord-icon {
 }
 
 .pilih:hover h4 {
-  color: rgb(250, 62, 172);
+  color: #ff85a2;
 }
 
 .pilih:hover {
@@ -339,24 +339,48 @@ lord-icon {
 .k {
   text-align: center;
   display: none;
-  color: rgb(250, 62, 172);
+  color: #ff85a2;
   transition: 0.4s;
 }
 
 .consult {
+  box-shadow: none;
   background-color: white;
   width: 360px;
-  height: 390px;
+  height: 500px;
   margin: 20px;
   border-radius: 20px;
-  box-shadow: 0 0 4px 4px rgb(250, 62, 172, 0.5);
   transition: 0.5s;
   cursor: pointer;
   overflow-y: hidden;
+  transition: 0.9s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.allCity {
-  display: none;
+.consult button {
+  border: none;
+  width: 50%;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #ff85a2;
+  color: white;
+  display: flex;
+  position: relative;
+  padding: 2px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.consult button:hover {
+  box-shadow: 0 0 2px 2px #ff85a2b3;
+  background-color: rgb(218, 218, 218);
+  color: #ff85a2;
+  transition: 0.5s;
 }
 
 .bdg {
@@ -367,17 +391,18 @@ lord-icon {
   display: none;
 }
 
-.jkt {
+.diy {
   display: none;
 }
 
 .consult:hover {
-  box-shadow: none;
+  box-shadow: 0 0 5px 5px rgb(255, 133, 162, 0.5);
+  transition: 0.5s;
 }
 
 .consult .gambar {
   width: 100%;
-  height: 60%;
+  height: 50%;
   background-image: url("https://carilayanan.com/wp-content/uploads/2021/06/tingey-injury-law-firm-6sl88x150Xs-unsplash-424x280.jpg");
   background-size: cover;
 }
@@ -399,7 +424,7 @@ lord-icon {
 
 .consult .deskripsi h4:nth-child(2) i {
   padding: 2px;
-  color: rgb(250, 62, 172);
+  color: #ff85a2;
 }
 
 .consult .deskripsi p {
@@ -408,7 +433,7 @@ lord-icon {
 
 .btn-lainnya {
   width: 90%;
-  background-color: rgb(250, 62, 172, 0.9);
+  background-color: rgb(255, 133, 162, 0.9);
   justify-content: center;
   margin: 10px auto;
   text-align: center;
@@ -421,14 +446,14 @@ lord-icon {
 
 .gambar2 {
   width: 100%;
-  height: 60%;
+  height: 50%;
   background-size: cover;
   background-image: url("https://carilayanan.com/wp-content/uploads/2021/06/possessed-photography-XEhiyexYIpg-unsplash-424x280.jpg");
 }
 
 .gambar3 {
   width: 100%;
-  height: 60%;
+  height: 50%;
   background-size: cover;
   background-image: url("https://carilayanan.com/wp-content/uploads/2020/11/national-cancer-institute-NFvdKIhxYlU-unsplash-424x280.jpg");
 }
@@ -448,7 +473,7 @@ lord-icon {
 }
 
 .btn-lainnya:hover {
-  background-color: rgb(250, 62, 172);
+  background-color: #ff85a2;
 }
 
 /* result end */
@@ -491,7 +516,7 @@ lord-icon {
 }
 
 .left p span {
-  color: rgb(250, 62, 172);
+  color: #ff85a2;
   font-weight: bold;
 }
 
@@ -499,6 +524,74 @@ lord-icon {
   background-color: white;
 }
 /* info website end */
+
+/* panduan */
+.carakerja {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  flex-direction: column;
+}
+
+.txt {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.text-primary {
+  color: #ff85a2;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.txt2 {
+  padding-left: 64px;
+  padding-right: 64px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  background-color: white;
+  box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.92);
+}
+
+.txt3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.txt4 {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.txt5 {
+  display: flex;
+  align-items: center;
+}
+
+.txt6 {
+  background-color: #ff85a2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.w-380 {
+  width: 380px;
+}
+/* panduan end */
 
 /* informasi */
 .informasi {
@@ -513,7 +606,7 @@ lord-icon {
   margin-top: px;
   width: 5%;
   padding: 5px;
-  color: rgb(250, 62, 172);
+  color: #ff85a2;
 }
 
 #p p {
@@ -522,7 +615,7 @@ lord-icon {
 }
 
 #p {
-  box-shadow: 0 0 3px 3px rgb(250, 62, 172, 0.9);
+  box-shadow: 0 0 3px 3px rgb(255, 133, 162, 0.9);
   padding: 40px;
   display: flex;
   font-family: "Poppins", sans-serif;
@@ -535,8 +628,8 @@ lord-icon {
 /* div1 */
 .div1 {
   display: flex;
-  background-color: rgb(250, 62, 172);
-  box-shadow: 0 0 7px 7px rgb(250, 62, 172, 0.9);
+  background-color: #ff85a2;
+  box-shadow: 0 0 7px 7px rgb(255, 133, 162, 0.9);
   margin-top: 80px;
   margin-bottom: 100px;
   flex-wrap: wrap;
@@ -558,7 +651,7 @@ lord-icon {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* div1 */
+/* div1 end */
 
 /* div2 */
 .div2 {
@@ -584,8 +677,8 @@ lord-icon {
 
 /* div3 */
 .div3 {
-  background-color: rgb(250, 62, 172);
-  box-shadow: 0 0 7px 7px rgb(250, 62, 172, 0.9);
+  background-color: #ff85a2;
+  box-shadow: 0 0 7px 7px rgb(255, 133, 162, 0.9);
   padding: 20px 0 20px 0;
   justify-content: center;
   align-items: center;
@@ -629,6 +722,63 @@ lord-icon {
 /* div3 end */
 /* informasi end */
 
+/* popup */
+
+.popup {
+  box-shadow: none;
+  background-color: white;
+  width: 55%;
+  height: 650px;
+  margin: 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  overflow-y: hidden;
+  transition: 0.9s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.popup h4 {
+  margin: 10px;
+  font-size: 14px;
+}
+.popup p {
+  margin: 10px;
+}
+.popup i {
+  padding: 2px;
+  color: #ff85a2;
+}
+.popup button {
+  border: none;
+  width: 50%;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #ff85a2;
+  color: white;
+  display: flex;
+  position: relative;
+  padding: 2px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.popup .popup_img {
+  width: 100%;
+  height: 50%;
+  background-image: url("https://carilayanan.com/wp-content/uploads/2021/06/tingey-injury-law-firm-6sl88x150Xs-unsplash-424x280.jpg");
+  background-size: cover;
+}
+
+/* footer */
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -636,7 +786,7 @@ lord-icon {
 
 .footer p {
   font-size: 13px;
-  color: rgba(209, 207, 207, 0.817);
+  color: rgb(249, 243, 243);
 }
 
 .footer h4 {
@@ -649,7 +799,7 @@ lord-icon {
 .footer .kanan {
   width: 25%;
   height: auto;
-  background-color: rgba(253, 89, 185, 0.872);
+  background-color: rgb(255, 133, 162, 0.6);
   padding: 30px;
 }
 
@@ -667,7 +817,7 @@ lord-icon {
 }
 
 footer .copy {
-  background-color: rgb(250, 62, 172);
+  background-color: #ff85a2;
   text-align: center;
   font-size: 12px;
   color: white;

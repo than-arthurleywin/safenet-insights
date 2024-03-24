@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const informasi = document.getElementById("informasi");
 
   satu.classList.add("active");
-  satu.style.color = "rgb(250, 62, 172)";
+  satu.style.color = "#ff85a2";
   dua.style.color = "black";
   bantuan.style.display = "block";
 
   satu.addEventListener("click", function () {
     satu.classList.add("active");
-    satu.style.color = "rgb(250, 62, 172)";
+    satu.style.color = "#ff85a2";
     dua.style.color = "black";
     dua.classList.remove("active");
     bantuan.style.display = "block";
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   dua.addEventListener("click", function () {
     dua.classList.add("active");
-    dua.style.color = "rgb(250, 62, 172)";
+    dua.style.color = "#ff85a2";
     satu.style.color = "black";
     satu.classList.remove("active");
     informasi.style.display = "block";
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const yogyakarta = document.getElementById("yogyakarta");
 
   all.classList.add("active");
-  all.style.color = "rgb(250, 62, 172)";
+  all.style.color = "#ff85a2";
   bandung.style.color = "black";
   jakarta.style.color = "black";
   yogyakarta.style.color = "black";
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   all.addEventListener("click", function () {
     all.classList.add("active");
-    all.style.color = "rgb(250, 62, 172)";
+    all.style.color = "#ff85a2";
     bandung.style.color = "black";
     bandung.classList.remove("active");
     jakarta.style.color = "black";
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   bandung.addEventListener("click", function () {
     bandung.classList.add("active");
-    bandung.style.color = "rgb(250, 62, 172)";
+    bandung.style.color = "#ff85a2";
     all.style.color = "black";
     all.classList.remove("active");
     jakarta.style.color = "black";
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   jakarta.addEventListener("click", function () {
     jakarta.classList.add("active");
-    jakarta.style.color = "rgb(250, 62, 172)";
+    jakarta.style.color = "#ff85a2";
     bandung.style.color = "black";
     bandung.classList.remove("active");
     all.style.color = "black";
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   yogyakarta.addEventListener("click", function () {
     yogyakarta.classList.add("active");
-    yogyakarta.style.color = "rgb(250, 62, 172)";
+    yogyakarta.style.color = "#ff85a2";
     bandung.style.color = "black";
     bandung.classList.remove("active");
     jakarta.style.color = "black";
@@ -196,10 +196,10 @@ categoryElements.forEach((categoryElement, index) => {
         }
       });
       toggleHoverEffect(categoryElement, hasilSections[index]);
-      categoryElement.style.backgroundColor = "rgb(250, 62, 172)";
+      categoryElement.style.backgroundColor = "#ff85a2";
       categoryElement.style.color = "#fcf6f5ff";
       categoryElement.style.boxShadow =
-        "0px 0px 3.2px 3.2px rgba(250, 62, 172, 0.7)";
+        "0px 0px 3.2px 3.2px rgba(255,133,162, 0.7)";
     }
   });
 });
@@ -236,3 +236,6 @@ function showElements(elements) {
     }
   });
 }
+
+
+// popup 
